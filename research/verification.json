@@ -1,0 +1,23 @@
+{
+  "checked_on": "2026-09-07",
+  "authored_markdown_files": 7,
+  "local_markdown_links_checked": 27,
+  "missing_local_links": [],
+  "schema": "Draft202012_VALID",
+  "example": "VALID_SYNTHETIC_NOT_TRAINING_ELIGIBLE",
+  "negative_contract_checks": {
+    "synthetic_cannot_train": true,
+    "unavailable_value_cannot_be_zero": true,
+    "unavailable_requires_reason": true,
+    "synthetic_source_cannot_claim_real": true
+  },
+  "experiment_config": "PROPOSED_WITH_UNRESOLVED_PILOT_PARAMETERS",
+  "audit_script_syntax": "VALID",
+  "downloaded_evidence_objects_hash_verified": 35,
+  "historical_access_errors": 1,
+  "historical_access_errors_resolved_by_followup": true,
+  "input_report_unchanged": true,
+  "trained_model": false,
+  "collector_implemented": false,
+  "sens_improvement_measured": false
+}

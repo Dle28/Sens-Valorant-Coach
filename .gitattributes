@@ -1,0 +1,5 @@
+# Preserve downloaded research evidence byte-for-byte, including original CRLF.
+research/evidence/** -text -whitespace
+*.png binary
+*.ico binary
+*.xz binary

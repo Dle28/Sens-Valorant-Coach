@@ -1,0 +1,11 @@
+# Reproducible dependencies and build output; binaries are GitHub Release assets.
+node_modules/
+dist/
+release/
+__pycache__/
+*.pyc
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example

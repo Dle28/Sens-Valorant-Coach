@@ -1,0 +1,86 @@
+{
+  "checked_on": "2026-09-07",
+  "input_report": {
+    "path": "/home/dungle/Downloads/deep-research-report.md",
+    "sha256": "724ef395484da1438b29e0b05a6489d613ef5c92a2c5fdd68bfcc3c16690089f",
+    "lines": 2285
+  },
+  "beacon_hf": {
+    "revision": "da1306428ef626108a914abff42ead19b3a46f62",
+    "manifest_rows": 602,
+    "included_data_files": 393,
+    "included_bytes": 444956465008,
+    "included_modality_counts": {
+      "pcap": 80,
+      "hardware": 79,
+      "keyboard_csv": 80,
+      "mouse_csv": 80,
+      "video": 74
+    },
+    "modality_unique_player_session_pairs": {
+      "pcap": 79,
+      "hardware": 79,
+      "keyboard_csv": 79,
+      "mouse_csv": 79,
+      "video": 72
+    },
+    "video_mouse_keyboard_pair_intersection": 72,
+    "mouse_prefix_complete_rows_inspected": 120,
+    "mouse_prefix_distinct_timestamps": 13,
+    "mouse_prefix_timestamp_values": [
+      "0.000000",
+      "0.011593",
+      "0.027397",
+      "0.043240",
+      "0.058975",
+      "0.071363",
+      "0.073368",
+      "0.074872",
+      "0.090649",
+      "0.100158",
+      "0.106584",
+      "0.116355",
+      "0.122455"
+    ],
+    "whole_corpus_timing_validated": false
+  },
+  "osf_exp1_sample": {
+    "file": "supplement_2026-09-07/osf_exp1_trials.csv.xz",
+    "table_rows": 42743,
+    "columns": [
+      "block_num",
+      "break",
+      "clicks",
+      "condition",
+      "cursor_mode",
+      "cursor_mode_cue",
+      "end_time",
+      "experiment",
+      "mouselook_inverted",
+      "n_pauses",
+      "outcome",
+      "outcome_time",
+      "session_num",
+      "staircase",
+      "start_clicked_time",
+      "start_time",
+      "target_angles_degrees",
+      "target_circle_radius",
+      "target_clicked_time",
+      "timeout_limit",
+      "trial_num",
+      "trial_num_in_block",
+      "trial_style",
+      "type",
+      "ppid"
+    ],
+    "type_counts": {
+      "sensitivity": 3063,
+      "main": 39680
+    },
+    "rows_are_not_all_eligible_trials": true,
+    "kinematic_trajectories_downloaded": false
+  },
+  "full_dataset_downloaded": false,
+  "research_replication_completed": false
+}

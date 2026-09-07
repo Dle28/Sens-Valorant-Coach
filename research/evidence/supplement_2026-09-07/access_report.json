@@ -1,0 +1,167 @@
+[
+  {
+    "name": "fpsci_contents.json",
+    "url": "https://api.github.com/repos/NVlabs/FPSci/contents?ref=d5dcea0a981a02174cbede813adfc4d6d7cab3b7",
+    "checked_at_utc": "2026-09-07T04:25:25.198991+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 7175,
+    "sha256": "76fe78542ccbac330e267c7b1a525055d621459dfd21a4f78574d511e939ff66"
+  },
+  {
+    "name": "osf_exp1.json",
+    "url": "https://api.osf.io/v2/nodes/xd8sm/files/osfstorage/64c16d1b747138012ff34a93/?page[size]=100",
+    "checked_at_utc": "2026-09-07T04:25:25.202875+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 7002,
+    "sha256": "69dd9c80dfa9d580d3d88d9356baef8ecf153362a8165d7599b341be2cff7644"
+  },
+  {
+    "name": "osf_exp2.json",
+    "url": "https://api.osf.io/v2/nodes/xd8sm/files/osfstorage/64c16d207471380130f34b86/?page[size]=100",
+    "checked_at_utc": "2026-09-07T04:25:25.203493+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 7002,
+    "sha256": "1f9ce31796c7f8f22911759e0ab9f3bbdfe45f6e0aebc673b1b43553bab2fc5b"
+  },
+  {
+    "name": "aimshoot_repo.json",
+    "url": "https://api.github.com/repos/jsyoon-k5/Aim-and-Shoot",
+    "checked_at_utc": "2026-09-07T04:25:25.203860+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 5250,
+    "sha256": "6a874bafb344e5a989ddd01ade1bfff7253d07b4cb9340e9cb3cc42f8bbb217d"
+  },
+  {
+    "name": "aimshoot_commit.json",
+    "url": "https://api.github.com/repos/jsyoon-k5/Aim-and-Shoot/commits/main",
+    "checked_at_utc": "2026-09-07T04:25:25.204314+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 4775,
+    "sha256": "751f3c068ca4a864cd9d7ed3e0f127162d99f42b2afd48b7523f46f72544702d"
+  },
+  {
+    "name": "valorant_detection_hf.json",
+    "url": "https://huggingface.co/api/datasets/keremberke/valorant-object-detection",
+    "checked_at_utc": "2026-09-07T04:25:25.204639+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 2142,
+    "sha256": "2f0d7baccd48d97cba1a6635b6bec8be0c7fc051af03cc1567b51258b08a37b1"
+  },
+  {
+    "name": "fpsci_LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/NVlabs/FPSci/d5dcea0a981a02174cbede813adfc4d6d7cab3b7/LICENSE.txt",
+    "checked_at_utc": "2026-09-07T04:28:35.795709+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 18895,
+    "sha256": "ab2ac5bfd8941fc6a00bcc03cafa007877ebbd20fc186040bac20258eb0c02f2"
+  },
+  {
+    "name": "aimshoot_README.md",
+    "url": "https://raw.githubusercontent.com/jsyoon-k5/Aim-and-Shoot/251ce79854c33bdbfe2f28aaa6669b0e58ad6445/README.md",
+    "checked_at_utc": "2026-09-07T04:28:35.796574+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 18155,
+    "sha256": "04e4dbf503ef89596f50ad62d76ed275e9f0bf0e184e71c79069e89584447d9f"
+  },
+  {
+    "name": "aimshoot_tree.json",
+    "url": "https://api.github.com/repos/jsyoon-k5/Aim-and-Shoot/git/trees/251ce79854c33bdbfe2f28aaa6669b0e58ad6445?recursive=1",
+    "checked_at_utc": "2026-09-07T04:28:35.797074+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 23906,
+    "sha256": "55d7e6f5fa8c309439dc1552735f4340551cda38e811b29e811cdef46277bddc"
+  },
+  {
+    "name": "osf_exp2_processed.json",
+    "url": "https://api.osf.io/v2/nodes/xd8sm/files/osfstorage/64c16d66515d830103a421ae/?page[size]=100",
+    "checked_at_utc": "2026-09-07T04:28:35.797523+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 2279,
+    "sha256": "a999e2fa281bbbc8a69553462e002fdda38daa48cae97343f8524470bb0fe61c"
+  },
+  {
+    "name": "osf_exp1_raw.json",
+    "url": "https://api.osf.io/v2/nodes/xd8sm/files/osfstorage/64c16d4c515d830103a42196/?page[size]=100",
+    "checked_at_utc": "2026-09-07T04:28:35.798067+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 10855,
+    "sha256": "53f5ea1720ed54d71d0e8c209bb912109655060d75aa02ae3e5f935da0b0569f"
+  },
+  {
+    "name": "valorant_detection_README.dataset.txt",
+    "url": "https://huggingface.co/datasets/keremberke/valorant-object-detection/resolve/8e08ea0dda44a5c942164865f3c2fc10f0e476ab/README.dataset.txt",
+    "checked_at_utc": "2026-09-07T04:28:35.798596+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 147,
+    "sha256": "f0ad053f2e7fba71fb957e8187f94f9dfc8461ad21bdff0b4c24f4f59d9977fc"
+  },
+  {
+    "name": "valorant_detection_README.roboflow.txt",
+    "url": "https://huggingface.co/datasets/keremberke/valorant-object-detection/resolve/8e08ea0dda44a5c942164865f3c2fc10f0e476ab/README.roboflow.txt",
+    "checked_at_utc": "2026-09-07T04:28:37.659207+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 673,
+    "sha256": "fe3eb6a5090b1cad216ec8a35fc932a94b6d3ec6dc0ae426dab747c10247622c"
+  },
+  {
+    "name": "osf_exp1_trials.csv.xz",
+    "url": "https://osf.io/download/srabu/",
+    "checked_at_utc": "2026-09-07T04:46:22.092683+00:00",
+    "prefix_only": false,
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 1533944,
+    "sha256": "0d2aa45de0d61345ce0f8bbcac21744963b2a0304ce4de89e04d8396c2101331"
+  },
+  {
+    "name": "osf_exp1_settings.csv",
+    "url": "https://osf.io/download/htx74/",
+    "checked_at_utc": "2026-09-07T04:46:22.093381+00:00",
+    "prefix_only": false,
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 1887,
+    "sha256": "7384c535a44173088d4fcf4207990d8353818691977d612a9eb71cd92046b410"
+  },
+  {
+    "name": "aimshoot_summary_prefix.txt",
+    "url": "https://raw.githubusercontent.com/jsyoon-k5/Aim-and-Shoot/251ce79854c33bdbfe2f28aaa6669b0e58ad6445/empirical/summary.csv",
+    "checked_at_utc": "2026-09-07T04:46:22.093875+00:00",
+    "prefix_only": true,
+    "status": "FETCHED",
+    "http_status": 206,
+    "bytes_saved": 8192,
+    "sha256": "c39d4d9634f76ae2bdf8d2338640f9f62d4de220c7c0495ad3704a67d99bf67d"
+  },
+  {
+    "name": "aimshoot_inference_results.csv",
+    "url": "https://raw.githubusercontent.com/jsyoon-k5/Aim-and-Shoot/251ce79854c33bdbfe2f28aaa6669b0e58ad6445/empirical/ijhcs_inference_results.csv",
+    "checked_at_utc": "2026-09-07T04:49:05.253244+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 9481,
+    "sha256": "7d27d8fbb142bdbe99390b24ad4f7b980b7022a661b6b5f9d4c1606eed029d05"
+  },
+  {
+    "name": "aimshoot_loader.py.txt",
+    "url": "https://raw.githubusercontent.com/jsyoon-k5/Aim-and-Shoot/251ce79854c33bdbfe2f28aaa6669b0e58ad6445/src/datamanager/load_emp_data.py",
+    "checked_at_utc": "2026-09-07T04:49:06.876829+00:00",
+    "status": "FETCHED",
+    "http_status": 200,
+    "bytes_saved": 13881,
+    "sha256": "9fc7b88a95ae134907f6bc535db6d1985c7f64261a086100c2d6227c63da5ad2"
+  }
+]

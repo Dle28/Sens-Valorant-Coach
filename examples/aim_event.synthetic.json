@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "event_id": "DEMO_EVENT_001",
+  "player_id": "DEMO_PLAYER",
+  "session_id": "DEMO_SESSION",
+  "block_id": "DEMO_BLOCK",
+  "is_synthetic": true,
+  "source": {
+    "kind": "synthetic",
+    "reference": "SCHEMA_EXAMPLE_ONLY_NO_SOURCE_RECORDING",
+    "sha256": null,
+    "input_coordinate_space": "none",
+    "extractor_version": "example-0.1.0"
+  },
+  "scenario": {"id": "C1_precision", "context": "controlled", "target_motion": "static", "difficulty_cell": "demo"},
+  "condition": {"assigned_gain_multiplier": 1.0, "actual_gain_multiplier": 1.0, "gain_calibrated": false, "phase": "example"},
+  "timeline_ms": {"timebase": "session_relative_ms", "start": 0, "end": 600, "visible": 100, "motor_onset": 250, "first_entry": 410, "click": 440, "fire": null},
+  "features": [
+    {"target_id": "A1", "name": "initial_alignment_error", "value": 3.2, "unit": "target_width", "method": "synthetic_example", "validity": "SYNTHETIC", "missing_reason": null},
+    {"target_id": "A4", "name": "first_entry_to_click", "value": 30, "unit": "ms", "method": "synthetic_example", "validity": "SYNTHETIC", "missing_reason": null},
+    {"target_id": "A3", "name": "raw_input_correction_count", "value": null, "unit": "count", "method": "not_computed", "validity": "UNAVAILABLE", "missing_reason": "NO_RAW_INPUT"}
+  ],
+  "outcome": "unknown",
+  "quality": {"alignment_validated": false, "eligible_for_sensitivity_fit": false, "reason_codes": ["SYNTHETIC_EXAMPLE", "NO_RAW_INPUT"]}
+}
