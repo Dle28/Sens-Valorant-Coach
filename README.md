@@ -3,6 +3,7 @@
 Ứng dụng desktop Windows và phòng tập aim 3D, phát triển dưới tên **Gamesen Aim Lab**. Có 7 bài tập, 3 thử thách, preset sensitivity hip-fire VALORANT, phân tích sau phiên và lưu dữ liệu cục bộ. Không kết nối vào game VALORANT.
 
 - **Tải app Windows:** [GitHub Releases](https://github.com/Dle28/Sens-Valorant-Coach/releases).
+- **Mục tiêu, hiện trạng và định hướng:** [docs/TARGETS_STATUS_ROADMAP.md](docs/TARGETS_STATUS_ROADMAP.md).
 - **Chạy và phát triển desktop:** [aim-lab/DESKTOP.md](aim-lab/DESKTOP.md).
 - **Chạy bản web:** [aim-lab/README.md](aim-lab/README.md).
 - **Mã nguồn app:** `aim-lab/src/` và `aim-lab/desktop/`.
