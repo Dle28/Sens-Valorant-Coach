@@ -1,8 +1,8 @@
 # Sens Valorant Coach
 
-**Bản phát hành v0.5.5:** thêm Verdant Sanctum, một sector đền đá 3D tự tạo với sân lát đá, cột cổ có cột gãy, vách núi low-poly, lối đi, tường lõm, cây leo, hoa năng lượng và thác nước chuyển động. Lobby vẫn giữ giao diện gaming tactical, 16 bài tập, bốn profile súng trình bày, chủ đề sáng/tối, cự ly bắn đa dạng và lịch sử tiến bộ theo từng mini-game. Xem [thay đổi](aim-lab/README.md). Tải bản Windows portable tại [Release v0.5.5](https://github.com/Dle28/Sens-Valorant-Coach/releases/tag/v0.5.5).
+**Bản phát hành v0.5.6:** bộ chọn map chỉ còn **Lotus** — cảnh đền đá 3D tự tạo với cột cổ, vách núi, cây leo, hoa năng lượng và thác nước — cùng **Dark Range**, nền tối tối giản để tập trung vào mục tiêu. Lịch sử Verdant Sanctum cũ được chuyển thành Lotus; map cũ bị loại được giữ nhãn legacy để không làm sai số liệu. Xem [thay đổi](aim-lab/README.md). Tải [bản Windows portable v0.5.6](https://github.com/Dle28/Sens-Valorant-Coach/releases/tag/v0.5.6).
 
-Ứng dụng desktop Windows và phòng tập aim 3D, phát triển dưới tên **Gamesen Aim Lab**. Có 16 bài tập, 5 khu vực 3D tự tạo, 3 thử thách, preset sensitivity hip-fire VALORANT, phân tích sau phiên và lưu dữ liệu cục bộ. Không kết nối vào game VALORANT.
+Ứng dụng desktop Windows và phòng tập aim 3D, phát triển dưới tên **Gamesen Aim Lab**. Có 16 bài tập, 2 map gồm Lotus và Dark Range, 3 thử thách, preset sensitivity hip-fire VALORANT, phân tích sau phiên và lưu dữ liệu cục bộ. Không kết nối vào game VALORANT.
 
 - **Tải app Windows:** [GitHub Releases](https://github.com/Dle28/Sens-Valorant-Coach/releases).
 - **Mục tiêu, hiện trạng và định hướng:** [docs/TARGETS_STATUS_ROADMAP.md](docs/TARGETS_STATUS_ROADMAP.md).
@@ -31,7 +31,7 @@ Bộ khung này chuyển báo cáo đầu vào thành các target có thể đo,
 
 **Bản Windows desktop:** [hướng dẫn và kiến trúc](aim-lab/DESKTOP.md), file portable trong `aim-lab/release/`.
 
-Dự án hiện có tài liệu nghiên cứu, hợp đồng dữ liệu v0.1 và **prototype phòng tập 3D trong [aim-lab](aim-lab/README.md)**: 16 bài aim, năm map sector, ba thử thách, phân tích sau phiên, preset sensitivity VALORANT trực tiếp, hiệu chuẩn DPI hiệu dụng và xuất telemetry cục bộ. Prototype dùng định dạng session riêng, chưa chuyển sang schema nghiên cứu. Chưa có mô hình đã train, dataset participant được thu mới hay kết quả chứng minh cải thiện aim/sens.
+Dự án hiện có tài liệu nghiên cứu, hợp đồng dữ liệu v0.1 và **prototype phòng tập 3D trong [aim-lab](aim-lab/README.md)**: 16 bài aim, hai map Lotus và Dark Range, ba thử thách, phân tích sau phiên, preset sensitivity VALORANT trực tiếp, hiệu chuẩn DPI hiệu dụng và xuất telemetry cục bộ. Prototype dùng định dạng session riêng, chưa chuyển sang schema nghiên cứu. Chưa có mô hình đã train, dataset participant được thu mới hay kết quả chứng minh cải thiện aim/sens.
 
 | Tài liệu | Dùng để quyết định |
 |---|---|

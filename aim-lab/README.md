@@ -1,8 +1,8 @@
-## Bản 0.5.5 — Verdant Sanctum 3D
+## Bản 0.5.6 — Lotus + Dark Range
 
-Verdant Sanctum là sector đền đá nguyên gốc, lấy cảm hứng ở mức cao từ cảm giác không gian đền nhiều tầng: nền lát đá, vách núi low-poly, sáu cột với biến thể gãy, tường lõm, lối đi dẫn tâm, dây leo, lá, hoa năng lượng và ba thác nước chuyển động. Khi chọn map này, nền cyber cũ được ẩn, màu trời/sương/ánh sáng đổi theo sector và mục tiêu dùng lane hẹp hơn với cự ly cộng thêm 3 m. Cảnh dùng geometry Three.js dựng trong app, không dùng layout, texture hay asset của VALORANT.
+Map đền đá 3D nguyên gốc nay mang tên **Lotus**. Cảnh có nền lát đá, vách núi low-poly, sáu cột với biến thể gãy, tường lõm, lối đi dẫn tâm, dây leo, lá, hoa năng lượng và ba thác nước chuyển động. **Dark Range** là lựa chọn còn lại: nền tối tối giản, chỉ giữ sàn, mục tiêu và súng để người chơi tập trung hoàn toàn vào tâm ngắm. Các sector cũ đã được bỏ khỏi giao diện và world scene. Lịch sử Verdant Sanctum được đọc là Lotus; phiên thuộc map đã bỏ được giữ nhãn legacy và không gộp vào số liệu hai map hiện hành. Cảnh Lotus dùng geometry Three.js dựng trong app, không dùng layout, texture hay asset của VALORANT.
 
-Tải [bản Windows portable v0.5.5](https://github.com/Dle28/Sens-Valorant-Coach/releases/tag/v0.5.5), kèm checksum SHA-256.
+Tải [bản Windows portable v0.5.6](https://github.com/Dle28/Sens-Valorant-Coach/releases/tag/v0.5.6), kèm checksum SHA-256.
 
 ## Bản 0.5.4 — cinematic 3D lobby, sector maps và loadout
 
@@ -55,7 +55,7 @@ Mỗi biểu đồ có nhận xét riêng gồm bằng chứng + hành động t
 - Kết quả có sai số góc theo thời gian, hiệu suất mỗi 5 giây và heatmap góc mục tiêu tương đối với tâm ngắm. Heatmap tính theo thời gian frame hợp lệ, không phải vị trí đạn.
 - Biểu đồ chi tiết hiện có sau phiên vừa chơi; lịch sử vẫn lưu tóm tắt.
 
-# Gamesen Aim Lab — Desktop + Web v0.5.5
+# Gamesen Aim Lab — Desktop + Web v0.5.6
 
 **Windows desktop:** xem [DESKTOP.md](DESKTOP.md). Bản `.exe` chạy độc lập, tự lưu JSON phiên và nhớ profile. Phần dưới đây là hướng dẫn bản web dùng chung engine.
 
