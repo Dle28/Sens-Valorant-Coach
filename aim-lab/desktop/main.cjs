@@ -55,7 +55,7 @@ else {
   Menu.setApplicationMenu(Menu.buildFromTemplate([
    {label:'Ứng dụng',submenu:[{label:'Mở thư mục dữ liệu phiên',click:openData},{type:'separator'},{role:'quit',label:'Thoát'}]},
    {label:'Hiển thị',submenu:[{label:'Toàn màn hình',accelerator:'F11',click:()=>win.setFullScreen(!win.isFullScreen())}]},
-   {label:'Trợ giúp',submenu:[{label:'Về Gamesen Aim Lab',click:()=>dialog.showMessageBox(win,{type:'info',title:'Gamesen Aim Lab',message:'Gamesen Aim Lab '+app.getVersion(),detail:'Phòng tập 3D offline · 7 bài · 3 thử thách\nSens hip-fire VALORANT theo preset.\nLưu dữ liệu trên máy; không kết nối VALORANT.\nDPI phần cứng không được đọc tự động.'})}]}
+   {label:'Trợ giúp',submenu:[{label:'Về Gamesen Aim Lab',click:()=>dialog.showMessageBox(win,{type:'info',title:'Gamesen Aim Lab',message:'Gamesen Aim Lab '+app.getVersion(),detail:'Phòng tập 3D offline · 16 bài · 4 độ khó · 3 thử thách\nSens hip-fire VALORANT theo preset.\nLưu dữ liệu trên máy; không kết nối VALORANT.\nDPI phần cứng không được đọc tự động.'})}]}
   ]));
   win.on('closed',()=>{win=null;});
   win.webContents.on('render-process-gone',(_event,details)=>{console.error('Renderer stopped:',details.reason);if(smoke)app.exit(3);});

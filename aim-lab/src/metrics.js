@@ -53,7 +53,7 @@ export function mulberry32(seed) {
   return () => { let t = seed += 0x6D2B79F5; t = Math.imul(t ^ t >>> 15, t | 1); t ^= t + Math.imul(t ^ t >>> 7, t | 61); return ((t ^ t >>> 14) >>> 0) / 4294967296; };
 }
 export function trialsCsv(run) {
-  const cols = ['trialId', 'outcome', 'initialErrorDeg', 'firstShotMs', 'firstShotHit', 'hitMs', 'shots', 'firstEntryMs', 'entryToFirstShotMs'];
+  const cols = ['trialId', 'outcome', 'initialErrorDeg', 'firstShotMs', 'firstShotHit', 'hitMs', 'shots', 'firstEntryMs', 'entryToFirstShotMs', 'distance', 'distanceBand', 'targetRadius', 'sizeBand'];
   const cell = value => value == null ? '' : '"' + String(value).replaceAll('"', '""') + '"';
   return [cols.join(','), ...(run.trials || []).map(t => cols.map(k => cell(t[k])).join(','))].join('\n');
 }

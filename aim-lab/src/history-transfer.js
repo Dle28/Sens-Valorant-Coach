@@ -11,7 +11,7 @@ export function parseHistory(text) {
    const v=s.summary?.[k];if(v!=null&&(!Number.isFinite(v)||v<0))throw new Error('Chỉ số trong file không hợp lệ.');summary[k]=v??null;
   }
   if(!Number.isFinite(summary.shots)||!Number.isFinite(summary.hits)||summary.hits>summary.shots)throw new Error('Số phát bắn không hợp lệ.');
-  const config={};for(const k of ['task','difficulty','durationMs','sensitivity','dpi','dpiSource','inputMode','inputGain','exerciseVersion','challengeId','seed','horizontalFovDeg']){const v=s.config[k];if(v===null||['string','number','boolean'].includes(typeof v))config[k]=v;}
+  const config={};for(const k of ['task','map','difficulty','durationMs','sensitivity','dpi','dpiSource','inputMode','inputGain','exerciseVersion','challengeId','seed','horizontalFovDeg']){const v=s.config[k];if(v===null||['string','number','boolean'].includes(typeof v))config[k]=v;}
   // Imported summaries lack verified provenance; retain them without inventing
   // trajectory analysis or admitting them to automatic progress comparisons.
   return {id:s.id,startedAt:s.startedAt,status:s.status,elapsedMs:Number.isFinite(s.elapsedMs)?s.elapsedMs:0,config,summary,qualityClean:false,imported:true};
