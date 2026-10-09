@@ -1,3 +1,155 @@
+## 0.24.0 — Local data lake release
+
+- Sau khi hoàn tất phiên desktop có consent, raw và manifest được kiểm checksum rồi tự đồng bộ cục bộ theo lớp `Bronze → Silver → Gold`. Phiên lỗi, synthetic hoặc chưa consent bị chặn khỏi dữ liệu dự đoán.
+- Lớp Bronze là immutable; đồng bộ lại cùng raw là idempotent, còn trùng `sessionId` nhưng checksum khác bị từ chối để không ghi đè lịch sử.
+- Mở vị trí dữ liệu từ menu **Ứng dụng** → **Mở data lake cục bộ**. Chưa có upload server hoặc API cloud trong bản demo.
+- Build phát hành duy nhất: `release/V-AIM-COACH-0.24.0-Windows-x64.exe`.
+
+## 0.22.0 — Lotus reference details
+
+- Integrates the supplied reference into the playable temple: warm sandstone, softer weathering, layered pink lotus crowns, instanced hanging foliage, column water ribbons and an engraved lotus floor medallion.
+- Wider skylight openings and more stone paving retain dirt channels and the existing connected interior layout. Flowers, foliage and water are cosmetic; water ribbons are static, not fluid simulation.
+- Build: release/V-AIM-COACH-0.22.0-Windows-x64.exe.
+
+## 0.21.0 — Lotus temple interior
+
+**Đã triển khai lộ trình luyện tập:** 3 playlists có nghỉ và khôi phục, Shoot/No-shoot, Priority trio, combo/huy chương và so sánh đúng cấu hình. Tổng 31 bài. Xem [hướng dẫn sử dụng](../docs/TRAINING_EXPANSION.md).
+
+
+- Replaces the outdoor square Garden courtyard with a stepped temple footprint: nave, west cloister, east hall and rear sanctuary. Collision-backed 8 m perimeter walls, nave colonnades, adjoining screen walls and stone obstacles.
+- Interior ceiling bands, overhead beams, longitudinal skylights and warm hanging lamps. Existing exterior facades and decorative trees are removed from this site.
+- Continuous earth floor with interrupted stone slabs and irregular moss patches. Floor stays level for movement; upper galleries and ramps remain accessible.
+- Player and bot navigation respect the room footprint. Minimap includes room shapes. All three approach routes remain connected to the plant area.
+- Build: release/V-AIM-COACH-0.21.0-Windows-x64.exe.
+
+## 0.20.0 — Ancient Lotus masonry
+
+- Garden/Lotus alone gains weathered plaster, exposed stone, branching cracks, mineral stains and moss patches.
+- Added lotus wall reliefs, incomplete halo carvings, broken frieze segments, trailing surface growth and chipped parapet tops. Removed modern utility vents from this site.
+- Surface details retain the existing cover footprints; visible cracks are not bullet-passable openings. Other site styles are unchanged.
+- Build: release/V-AIM-COACH-0.20.0-Windows-x64.exe.
+
+## 0.19.0 — Weapon clarity
+
+**Cập nhật mini-game 09/09/2026:** thêm 6 bài (Figure 8, Pendulum, Zigzag click, Stop & Go, Elevation ladder, Flash flick), nâng catalog lên 29 bài gồm 25 mini-game và 4 Combat Sites; có 7 thử thách. Mở **Mini-games** ở sidebar hoặc chọn **Game Mode** trong briefing. Xem [chi tiết và các phần cần bổ sung](../docs/MINI_GAMES_REVIEW.md). Đây là cập nhật mã nguồn/bundle, chưa có EXE mới.
+
+
+- Bevelled gun housings, receiver screws, ejection-port recess, rail teeth, fore-end vents, magazine ribs and dark muzzle bores.
+- Knife uses a broad extruded blade with bevelled cutting edges, ribbed handle, metal pins and pommel.
+- Neutral fill light and subdued non-emissive body materials replace bright colored body glow. Geometry stays outside hit tests; damage and recoil rules are unchanged.
+- Build: release/V-AIM-COACH-0.19.0-Windows-x64.exe.
+
+## 0.18.0 — Wall bands and terrain cover
+
+- Added 17 collision-backed pieces per site: staggered entry-lane walls, rear L-shaped wall enclosures, interrupted low back walls, and raised cover at 0.45 / 0.85 / 1.25 m.
+- Long walls have buttresses and inset bands; stepped cover has distinct top surfaces and edge markings. Low steps can be jumped onto, not automatically climbed.
+- All three entrances remain connected to the objective. Both existing upper-floor ramps remain passable, and bot spawn movement checks pass.
+- Build: release/V-AIM-COACH-0.18.0-Windows-x64.exe.
+
+## 0.17.0 — Bot stances and combat HUD
+
+- Bots alternate crouch, occasional jumps, trigger-release windows and smooth pre-aim toward visible or last-seen player positions. They stop firing in midair or while aim is unsettled. Procedural animation, not a skeletal motion-capture system.
+- Added 20 collidable pillar-and-wall corner clusters across four maps. Existing entrances and ramp routes remain usable.
+- Top-left minimap shows layout, player heading, objective and unobstructed enemy positions. Bottom health/shield bars, red impact vignette fading in 650 ms, and low-health styling.
+- Build: release/V-AIM-COACH-0.17.0-Windows-x64.exe.
+
+## 0.16.0 — Objective update
+
+- Hold Ctrl for smooth crouch eye height and slower movement; hold Shift to walk. Crouch lowers the enemy sight-line target but does not allow crawling beneath geometry.
+- 1 primary / 2 Classic / 3 knife / 4 Spike. Separate procedural view models, 300 ms equip delay, 2 m melee reach and 50 knife damage. No ammunition/reload simulation yet.
+- Retake: pre-planted objective, 45-second fuse, hold F within 2 m for 7-second defuse with a 3.5-second checkpoint. Eliminating bots alone does not win.
+- Attack & Plant: 90 seconds to enter and plant. Hold F with slot 4 in the marked zone for 4 seconds, then survive 45 seconds against bot waves. Moving or releasing F cancels planting; pausing freezes time.
+- Solo objective drills: no agent abilities, teammates, economy or bot defusing. Timing values are training rules; this is not a full Valorant match simulation.
+- Added perimeter vents, light strips, framed entry portals and equipment hands. Bot navigation remains on the ground floor.
+- Retake role reference: https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-00/
+- Build: release/V-AIM-COACH-0.16.0-Windows-x64.exe.
+
+## 0.15.0 — Cover routes and armed bots
+
+- Added 21 collidable supply caches across the four site layouts (garden 7, piazza 4, atrium 5, foundry 5), with straps, handles and surface trim. Three entrances and both ramps remain clear.
+- Bots use ground-level grid navigation to relocate between cover-adjacent positions, with smooth velocity and brief firing pauses. Player-accessible upper floors remain; bots currently navigate the ground floor.
+- Procedural Vandal-style rifle on bots. Shared Vandal damage: head 160, body 40, legs 34; bots have 150 total HP, matching the player's 100 HP + 50 shield budget. Other player weapons now have explicit per-region damage in `src/combat-balance.js`.
+- Easy / Normal / Hard / Expert vary reaction, shot cadence, accuracy and movement (1.35 / 1.65 / 2.0 / 2.3 m/s), never damage. Enemy hits are probabilistic with line-of-sight checks; this is not a physical bullet simulation. Rifle geometry is authored locally.
+- EXE: `release/V-AIM-COACH-0.15.0-Windows-x64.exe`.
+
+## Bản phát triển 0.14.0 — Animated opponents & multilevel sites
+
+- Bot có chân khớp xoay theo nhịp bước, thân/tay chuyển nhẹ theo nhịp chạy/thở, vận tốc né được blend qua gia tốc. Vùng trúng đạn của chân đi theo mesh động. Đây là animation procedural, chưa phải motion capture hoặc IK bàn chân.
+- Súng góc nhìn thứ nhất lắc nhẹ theo tốc độ đi bộ; giữ tâm ngắm độc lập với hiệu ứng lắc súng.
+- Khu chơi khoảng 52 × 49 m; hai tầng biên cao 1.8 m / 3 m có ramp đi lên, nhảy xuống được. Ba cổng West/Main/East ở phía tiếp cận, vùng đặt bom 7 × 6 m đánh dấu dưới sàn. Vùng này là mốc luyện tập, chưa có cơ chế đặt/gỡ bom.
+- Dữ liệu traversal chung ở `src/maps/shared/traversal.js`, áp dụng cho 4 map. Kiểm tra đường vào, đi lên/xuống ramp, animation và phiên FPS bằng input mô phỏng.
+- Windows: `release/V-AIM-COACH-0.14.0-Windows-x64.exe`.
+
+## Bản phát triển 0.13.0 — Surface & ornamental detail
+
+- Bề mặt đá/kim loại procedural có vân, đường mạch và đinh tán, tạo bằng mã và dùng offline. Texture được giải phóng khi đổi site.
+- Piazza có cửa chớp, mái hiên sọc và bồn hoa trên cao; Garden/Atrium có cột, phù điêu và huy chương đá; Foundry có ống nối, mặt bích và van.
+- Chi tiết mới nằm dọc tường và trên vùng ngắm. Không thay đổi layout va chạm hoặc cân bằng bot.
+- Kiểm thử Electron chạy cả 4 site với di chuyển, nhảy, giữ cò và recoil bằng input mô phỏng.
+- Windows: `release/V-AIM-COACH-0.13.0-Windows-x64.exe`.
+
+## Bản phát triển 0.12.0 — Map/site folders & architectural detail
+
+- Map data now lives in `src/maps/{garden,piazza,atrium,foundry}/sites/main/layout.js`; each site has a `scene.js` render entry point. See `src/maps/README.md` for the folder contract.
+- Added upper side galleries, railings, window/door surrounds, masonry courses and lamps; Foundry uses pipes and ventilation details. Cover has plinths and layered face panels.
+- Original map IDs, collision layout and saved-session compatibility are preserved. New ornamental architecture stays along the perimeter or above the aiming band.
+- Windows build: `release/V-AIM-COACH-0.12.0-Windows-x64.exe`.
+
+## Bản phát triển 0.11.0 — Site architecture & smooth movement
+
+- Thêm Temple Garden (tham khảo mỹ thuật Lotus) và Piazza Court (tham khảo mỹ thuật Ascent), nâng tổng số Combat Sites lên 4. Có mái tầng, vòm, tháp, cây rủ và nền trời theo chủ đề. Đây là kiến trúc nguyên gốc giản lược, chưa phải bản tái dựng map Valorant chính xác.
+- Bóng đổ mềm 2048 px, vật liệu dùng chung, sàn dùng instancing để giảm draw calls. Chỉnh typography, đường viền, hover/focus của menu Combat Sites.
+- Di chuyển có gia tốc/phanh theo thời gian, giữ nguyên nhảy và va chạm.
+- Tham khảo: [Lotus art & architecture](https://playvalorant.com/en-gb/news/dev/lotus-unearthing-valorant-s-lost-city/), [Ascent design](https://playvalorant.com/en-us/news/dev/the-birth-of-ascent/).
+- Windows: `release/V-AIM-COACH-0.11.0-Windows-x64.exe`.
+
+## Bản phát triển 0.10.0 — Expanded combat sites
+
+- Hai site mở rộng khoảng 36 × 45 m, thêm đường vòng và 7 cụm vật che cao/thấp mỗi site. Thiết kế nguyên gốc, tham khảo nguyên tắc sightline/encounter distance trong bài [The Birth of Ascent](https://playvalorant.com/en-us/news/dev/the-birth-of-ascent/).
+- Bot né ngang theo vị trí người chơi, lùi khi người chơi quá gần; tốc độ tối đa 1.65 m/s, đổi quyết định sau 0.85–1.85 giây, có dừng ngắn và xử lý vật cản cục bộ. Chưa dùng hệ thống tìm đường toàn map.
+- Địch xuất hiện cách nhau 1 giây; nghỉ 2.8 giây sau khi hạ hết đợt.
+- Space nhảy, có trọng lực và tiếp đất trên vật che thấp. Giữ chuột trái bắn liên thanh khoảng 9 phát/giây trong Combat Sites; recoil kéo camera lên và lệch ngang nhẹ, có thể ghìm bằng chuột. Nhả cò một lúc đặt lại nhịp recoil, không tự kéo tâm về vị trí cũ.
+- Bản portable: `release/V-AIM-COACH-0.10.0-Windows-x64.exe`.
+
+## Bản phát triển 0.9.1 — Compact tactical opponents
+
+Địch có dáng người chiến thuật nguyên gốc gọn hơn, cao khoảng 1.77 m, đầu nhỏ, giáp ôm thân và hai tay giữ súng. Combat Sites đặt chân đúng mặt sàn, vùng trúng đạn bám theo đầu/thân/tay/chân; súng và phụ kiện không nhận hit. Exercise version 0.9.1 tách baseline vì kích thước hình học đã đổi. File Windows: `release/V-AIM-COACH-0.9.1-Windows-x64.exe`.
+
+## Bản phát triển 0.9.0 — Combat Sites FPS
+
+**Combat Sites** thay vị trí Tactical Lab trên sidebar: chọn **Sunken Atrium** hoặc **Relay Foundry**, độ khó và thời lượng rồi chơi ở góc nhìn thứ nhất.
+
+- **Site Defense:** 2–3 địch một đợt tùy độ khó, xuất hiện ở nhiều phía. Hạ hết đợt sẽ có đợt mới cho đến khi hết giờ hoặc hết HP.
+- **Movement Read:** địch đổi nhịp strafe/wide swing/điểm đến, xen kẽ nhịp dừng ngắn; gây ít sát thương hơn để tập đọc chuyển động.
+- WASD, Shift, ngắm chuột và click bắn; có súng, thân hình địch, cover chặn di chuyển và đường đạn. Không có camera tactical hay mũi tên hướng dẫn trong phiên.
+- Ghi số phát, hạ gục, HP/giáp và vị trí/vận tốc. Đạn địch vẫn dùng mô hình xác suất có xét cover và chuyển động, chưa phải mô phỏng đường đạn vật lý đầy đủ.
+
+Windows portable: `release/V-AIM-COACH-0.9.0-Windows-x64.exe`. Integration harness `scripts/site-smoke.cjs` kiểm tra hai phiên trong Electron với input mô phỏng và profile riêng.
+
+## Bản phát triển 0.8.0 — Tactical Lab
+
+Mở **Tactical Lab** ở sidebar để xem 10 tình huống: wide swing, jiggle peek, angle clearing, off-angle, counter-strafe, shoulder peek, micro-adjustment, target switch, vertical transition và retake.
+
+- Cảnh Three.js nguyên gốc, nhân vật cyan/cam, đường di chuyển, hướng ngắm được chặn bởi cover, bóng vị trí và vùng lộ/khuất cho bài peek.
+- Phát/tạm dừng, tua timeline, chọn bước, đổi tốc độ, xoay/zoom camera, toàn màn hình và bật/tắt hướng dẫn.
+- 10 ảnh concept đi kèm, dùng offline. Concept là minh họa mỹ thuật; mô phỏng 3D dùng hình học riêng để kiểm tra đường nhìn.
+- Đây là mô phỏng hướng dẫn chiến thuật, chưa phải 10 mini-game điều khiển trực tiếp và không tạo điểm hay lịch sử luyện tập. Các mini-game WASD/bắn trả hiện có vẫn nằm trong phần Train.
+
+Bản portable cục bộ: `release/V-AIM-COACH-0.8.0-Windows-x64.exe`.
+
+## Bản phát triển 0.7.0 — Active tactical mini-games
+
+- Ba mode mới: **Strafe Duel**, **Counter-strafe** và **Survival Lane**.
+- Khi vào các mode này, `WASD` di chuyển theo hướng nhìn, `Shift` chạy; địch 3D nguyên gốc có thể strafe, peek, wide swing hoặc đổi lane ngẫu nhiên rồi bắn trả.
+- Phiên ghi lại vị trí/vận tốc người chơi, HP/giáp, áp lực địch và sát thương để kết quả vẫn dựa trên dữ liệu đo được.
+- Mỗi micro-zone dùng background render nguyên gốc riêng: Lotus Water Court và Dark Range lane thay vì lặp lại một ảnh toàn map.
+
+## Bản phát triển 0.6.0 — V-AIM COACH tactical scenario browser
+
+Giao diện desktop nay dùng App Shell **V-AIM COACH** với top navigation, sidebar cố định, Home coaching hub, Map Training, Scenario Detail và Analytics. Chỉ có hai map: **Lotus** với cảnh đền 3D gốc và **Dark Range** tối giản. Map → zone → scenario → cấu hình → Start Training là một luồng dữ liệu; nút Start dùng đúng engine Pointer Lock/toàn màn hình đang có. Mọi thumbnail, minimap, marker và preview là hình khối CSS/Three.js tự tạo, không dùng UI, logo, map hay asset chính thức của VALORANT.
+
+Scenario được tách vào `src/scenarios.js`: mỗi micro-zone có các tình huống chiến thuật, góc spawn, kỹ năng cần luyện và khuyến nghị riêng. Dashboard và Analytics chỉ hiển thị các số liệu đã lưu cục bộ; không sinh số liệu giả khi chưa có baseline.
+
 ## Bản 0.5.6 — Lotus + Dark Range
 
 Map đền đá 3D nguyên gốc nay mang tên **Lotus**. Cảnh có nền lát đá, vách núi low-poly, sáu cột với biến thể gãy, tường lõm, lối đi dẫn tâm, dây leo, lá, hoa năng lượng và ba thác nước chuyển động. **Dark Range** là lựa chọn còn lại: nền tối tối giản, chỉ giữ sàn, mục tiêu và súng để người chơi tập trung hoàn toàn vào tâm ngắm. Các sector cũ đã được bỏ khỏi giao diện và world scene. Lịch sử Verdant Sanctum được đọc là Lotus; phiên thuộc map đã bỏ được giữ nhãn legacy và không gộp vào số liệu hai map hiện hành. Cảnh Lotus dùng geometry Three.js dựng trong app, không dùng layout, texture hay asset của VALORANT.

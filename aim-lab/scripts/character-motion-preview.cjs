@@ -1,0 +1,44 @@
+const {app,BrowserWindow}=require('electron');
+const {fork}=require('node:child_process');
+const path=require('node:path'),fs=require('node:fs');
+app.setPath('userData',path.join(app.getPath('temp'),'character-motion-'+process.pid));
+let server;
+app.whenReady().then(async()=>{
+ server=fork(path.join(__dirname,'../server.mjs'),[],{env:{...process.env,PORT:'4195',ELECTRON_RUN_AS_NODE:'1'},stdio:'pipe'});
+ await new Promise((r,j)=>{server.stdout.once('data',r);server.once('error',j);});
+ const win=new BrowserWindow({show:false,width:1200,height:720,webPreferences:{offscreen:true,backgroundThrottling:false}});
+ await win.loadURL('http://localhost:4195');
+ const result=await win.webContents.executeJavaScript(`(async()=>{
+  const THREE=await import('/node_modules/three/build/three.module.js');
+  const {createEnemyRig}=await import('/src/enemy-rig.js');
+  const {createEnemyRig:before}=await import('/tests/fixtures/enemy-rig-before.js');
+  const renderer=new THREE.WebGLRenderer({antialias:true});renderer.setSize(1200,720);renderer.setPixelRatio(1);renderer.outputColorSpace=THREE.SRGBColorSpace;
+  const scene=new THREE.Scene();scene.background=new THREE.Color('#17232d');
+  scene.add(new THREE.HemisphereLight(0xd5eaff,0x7b7a69,3));const light=new THREE.DirectionalLight(0xffe5c4,3);light.position.set(3,6,5);scene.add(light);
+  const grid=new THREE.GridHelper(20,40,0x4e747d,0x304b58);scene.add(grid);
+  const camera=new THREE.PerspectiveCamera(38,1200/720,.1,100);camera.position.set(0,2.7,7.8);camera.lookAt(0,.85,0);
+  const rigs=[before(),createEnemyRig()];rigs.forEach(r=>{r.root.visible=true;scene.add(r.root);});
+  const canvas=document.createElement('canvas');canvas.width=1200;canvas.height=720;const ctx=canvas.getContext('2d');
+  const stream=canvas.captureStream(30),chunks=[],recorder=new MediaRecorder(stream,{mimeType:'video/webm;codecs=vp9',videoBitsPerSecond:3500000});
+  const done=new Promise(r=>recorder.onstop=r);recorder.ondataavailable=e=>chunks.push(e.data);recorder.start();
+  const screenshots={};let start=null,last=0;
+  await new Promise(resolve=>{function frame(now){
+   if(start===null){start=now;last=now;}const t=(now-start)/1000,dt=Math.min(.05,(now-last)/1000);last=now;
+   const state=t<2?'WALK / STRAFE':t<4?'DIRECTION CHANGE':t<6?'CROUCH':t<8?'JUMP / LAND':'SETTLE TO IDLE';
+   const moving=t<4,crouch=t>=4&&t<6?Math.min(1,(t-4)*3):0;
+   const vx=moving?Math.cos(t*3)*1.65:0,vz=moving?Math.sin(t*3)*.5:0;
+   const jump=t>=6&&t<8?Math.max(0,Math.sin((t-6)*Math.PI)*.8):0;
+   rigs.forEach((r,i)=>{r.root.position.set((i?1:-1)*1.35+(moving?Math.sin(t*3)*.55:0),1.6-crouch*.42+jump,0);r.root.rotation.y=t<2?.35:t<4?Math.sin(t*2)*.8:.35;r.animate({x:vx,z:vz},dt,now,crouch,{grounded:jump<.01});});
+   renderer.render(scene,camera);ctx.drawImage(renderer.domElement,0,0);ctx.fillStyle='#e6f2f6';ctx.font='bold 24px sans-serif';ctx.fillText('BEFORE',190,55);ctx.fillText('AFTER',815,55);ctx.font='20px sans-serif';ctx.fillText(state,455,685);
+   if(t>5&&!screenshots.crouch)screenshots.crouch=canvas.toDataURL('image/png').split(',')[1];
+   if(t>1&&!screenshots.walk)screenshots.walk=canvas.toDataURL('image/png').split(',')[1];
+   if(t<10)requestAnimationFrame(frame);else resolve();
+  }requestAnimationFrame(frame);});recorder.stop();await done;stream.getTracks().forEach(t=>t.stop());
+  const bytes=new Uint8Array(await new Blob(chunks,{type:'video/webm'}).arrayBuffer());let binary='';for(let i=0;i<bytes.length;i+=16384)binary+=String.fromCharCode(...bytes.subarray(i,i+16384));
+  return {video:btoa(binary),screenshots};
+ })()`,true);
+ const out=process.env.MOTION_OUTPUT||path.join(__dirname,'../output');fs.mkdirSync(out,{recursive:true});
+ fs.writeFileSync(path.join(out,'character-motion-before-after.webm'),Buffer.from(result.video,'base64'));
+ for(const [name,data] of Object.entries(result.screenshots))fs.writeFileSync(path.join(out,'character-motion-'+name+'.png'),Buffer.from(data,'base64'));
+ console.log('Recorded 10-second real-time Three.js comparison');server.kill();app.exit(0);
+}).catch(e=>{console.error(e);server?.kill();app.exit(1);});

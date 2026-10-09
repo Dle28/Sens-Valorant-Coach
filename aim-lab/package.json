@@ -1,6 +1,6 @@
 {
   "name": "gamesen-aim-lab",
-  "version": "0.5.6",
+  "version": "0.24.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,6 +8,10 @@
     "build": "node build.mjs",
     "preview": "node server.mjs --dist",
     "test": "node --test tests/*.test.mjs",
+    "data:audit": "node scripts/audit-sessions.mjs",
+    "lake:sync": "node scripts/sync-data-lake.mjs",
+    "ml:build-dataset": "node scripts/build-next-assessment-dataset.mjs",
+    "ml:evaluate-baseline": "node scripts/evaluate-next-assessment-baseline.mjs",
     "desktop": "npm run build && node scripts/desktop.mjs",
     "desktop:smoke": "npm run build && node scripts/desktop.mjs --smoke-test",
     "pack:win": "npm run build && electron-builder --win portable --x64 --publish never",
@@ -20,7 +24,7 @@
     "three": "0.180.0"
   },
   "main": "desktop/main.cjs",
-  "description": "Offline 3D aim practice with VALORANT-style sensitivity and session analysis",
+  "description": "Offline 3D tactical aim practice with local session analysis and DPI setup guidance",
   "author": "Gamesen",
   "license": "UNLICENSED",
   "engines": {
@@ -28,7 +32,7 @@
   },
   "build": {
     "appId": "com.gamesen.aimlab",
-    "productName": "Gamesen Aim Lab",
+    "productName": "V-AIM COACH",
     "directories": {
       "output": "release"
     },
@@ -37,10 +41,19 @@
       "dist/main.js",
       "dist/main.js.LEGAL.txt",
       "dist/style.css",
+      "dist/interface.css",
+      "dist/assets/fonts/*",
+      "dist/assets/models/*.glb",
       "desktop/*.cjs",
+      "src/data-contract.js",
+      "src/data-lake.js",
+      "src/assessment-protocol.js",
+      "src/telemetry-features.js",
+      "src/aim-geometry.js",
       "package.json",
       "desktop/app.png",
-      "desktop/app.ico"
+      "desktop/app.ico",
+      "dist/assets/maps/*"
     ],
     "asar": true,
     "npmRebuild": false,
@@ -52,7 +65,7 @@
       "icon": "desktop/app.ico"
     },
     "portable": {
-      "artifactName": "Gamesen-Aim-Lab-${version}-Windows-x64.exe"
+      "artifactName": "V-AIM-COACH-${version}-Windows-x64.exe"
     },
     "linux": {
       "target": [

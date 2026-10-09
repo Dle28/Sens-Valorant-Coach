@@ -1,0 +1,11 @@
+import garden from './garden/sites/b/layout.js';
+import piazza from './piazza/sites/main/layout.js';
+import atrium from './atrium/sites/main/layout.js';
+import foundry from './foundry/sites/main/layout.js';
+import {buildDetails as gardenScene} from './garden/sites/b/scene.js';
+import {buildDetails as piazzaScene} from './piazza/sites/main/scene.js';
+import {buildDetails as atriumScene} from './atrium/sites/main/scene.js';
+import {buildDetails as foundryScene} from './foundry/sites/main/scene.js';
+import {addTraversal} from './shared/traversal.js';
+export const SITES=Object.fromEntries(Object.entries({garden,piazza,atrium,foundry}).map(([id,site])=>[id,addTraversal(site)]));
+export const SITE_BUILDERS={garden:gardenScene,piazza:piazzaScene,atrium:atriumScene,foundry:foundryScene};

@@ -1,0 +1,235 @@
+{
+  "source": "Local Three.js map geometry",
+  "width": 1600,
+  "height": 900,
+  "captures": [
+    {
+      "site": "piazza",
+      "view": "entry",
+      "position": [
+        0,
+        2.4,
+        8
+      ],
+      "look": [
+        2,
+        3,
+        -13
+      ],
+      "calls": 401,
+      "triangles": 34142,
+      "batching": {
+        "removed": 1700,
+        "batches": 290
+      }
+    },
+    {
+      "site": "piazza",
+      "view": "court",
+      "position": [
+        -12,
+        3,
+        -4
+      ],
+      "look": [
+        5,
+        2,
+        -17
+      ],
+      "calls": 318,
+      "triangles": 29404,
+      "batching": {
+        "removed": 1700,
+        "batches": 290
+      }
+    },
+    {
+      "site": "piazza",
+      "view": "overview",
+      "position": [
+        13,
+        6,
+        7
+      ],
+      "look": [
+        -3,
+        2,
+        -13
+      ],
+      "calls": 404,
+      "triangles": 35410,
+      "batching": {
+        "removed": 1700,
+        "batches": 290
+      }
+    },
+    {
+      "site": "atrium",
+      "view": "entry",
+      "position": [
+        0,
+        2.4,
+        8
+      ],
+      "look": [
+        2,
+        3,
+        -13
+      ],
+      "calls": 292,
+      "triangles": 30774,
+      "batching": {
+        "removed": 1465,
+        "batches": 256
+      }
+    },
+    {
+      "site": "atrium",
+      "view": "court",
+      "position": [
+        -12,
+        3,
+        -4
+      ],
+      "look": [
+        5,
+        2,
+        -17
+      ],
+      "calls": 263,
+      "triangles": 28486,
+      "batching": {
+        "removed": 1465,
+        "batches": 256
+      }
+    },
+    {
+      "site": "atrium",
+      "view": "overview",
+      "position": [
+        13,
+        6,
+        7
+      ],
+      "look": [
+        -3,
+        2,
+        -13
+      ],
+      "calls": 311,
+      "triangles": 33170,
+      "batching": {
+        "removed": 1465,
+        "batches": 256
+      }
+    },
+    {
+      "site": "foundry",
+      "view": "entry",
+      "position": [
+        0,
+        2.4,
+        8
+      ],
+      "look": [
+        2,
+        3,
+        -13
+      ],
+      "calls": 274,
+      "triangles": 29558,
+      "batching": {
+        "removed": 1401,
+        "batches": 252
+      }
+    },
+    {
+      "site": "foundry",
+      "view": "court",
+      "position": [
+        -12,
+        3,
+        -4
+      ],
+      "look": [
+        5,
+        2,
+        -17
+      ],
+      "calls": 230,
+      "triangles": 26258,
+      "batching": {
+        "removed": 1401,
+        "batches": 252
+      }
+    },
+    {
+      "site": "foundry",
+      "view": "overview",
+      "position": [
+        13,
+        6,
+        7
+      ],
+      "look": [
+        -3,
+        2,
+        -13
+      ],
+      "calls": 286,
+      "triangles": 31182,
+      "batching": {
+        "removed": 1401,
+        "batches": 252
+      }
+    },
+    {
+      "site": "garden",
+      "view": "entry",
+      "position": [
+        2.7,
+        1.6,
+        -4.05
+      ],
+      "look": [
+        0,
+        1.3,
+        -22.95
+      ],
+      "calls": 187,
+      "triangles": 72665
+    },
+    {
+      "site": "garden",
+      "view": "court",
+      "position": [
+        16.2,
+        1.6,
+        -10.125
+      ],
+      "look": [
+        -2.7,
+        1,
+        -17.55
+      ],
+      "calls": 199,
+      "triangles": 73736
+    },
+    {
+      "site": "garden",
+      "view": "overview",
+      "position": [
+        -8,
+        6,
+        -9
+      ],
+      "look": [
+        1,
+        0.2,
+        -20
+      ],
+      "calls": 191,
+      "triangles": 72499
+    }
+  ]
+}

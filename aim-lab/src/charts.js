@@ -2,11 +2,8 @@ import { chartCoaching } from './chart-coaching.js';
 import { renderChartCoaching } from './chart-coaching-view.js';
 const finite = Number.isFinite;
 const escape = value => String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-export function aimOffset(target,yaw,pitch){
- if(!Array.isArray(target)||target.length!==3||!target.every(finite)||!finite(yaw)||!finite(pitch))return null;
- const [x,y,z]=target;
- return {x:-Math.atan2(Math.sin(Math.atan2(x,-z)+yaw),Math.cos(Math.atan2(x,-z)+yaw))*180/Math.PI,y:(pitch-Math.atan2(y-1.6,Math.hypot(x,z)))*180/Math.PI};
-}
+import { aimOffset } from './aim-geometry.js';
+export { aimOffset } from './aim-geometry.js';
 export function chartData(run,extent=30){
  const duration=Math.max(0,run.elapsedMs||0), buckets=Array.from({length:Math.max(1,Math.ceil(duration/5000))},(_,i)=>({start:i*5000,hits:0,shots:0,valid:0,on:0}));
  const cells=Array(25*15).fill(0);let outside=0,inside=0,located=0;
@@ -15,7 +12,7 @@ export function chartData(run,extent=30){
  for(const f of frames){
   const end=Math.min(duration,f.t),start=Math.max(0,f.t-f.dt),weight=Math.max(0,end-start);
   for(let i=Math.floor(start/5000);i<buckets.length&&i*5000<end;i++){const w=Math.max(0,Math.min(end,(i+1)*5000)-Math.max(start,i*5000));buckets[i].valid+=w;buckets[i].on+=f.onTarget?w:0;}
-  const offset=aimOffset(f.target,f.yaw,f.pitch);if(!offset)continue;located+=weight;
+  const offset=aimOffset(f.target,f.yaw,f.pitch,f.cameraPosition);if(!offset)continue;located+=weight;
   if(Math.abs(offset.x)>extent||Math.abs(offset.y)>extent*.6){outside+=weight;continue;}inside+=weight;
   const col=Math.min(24,Math.floor((offset.x+extent)/(2*extent)*25)),row=Math.min(14,Math.floor((extent*.6-offset.y)/(extent*1.2)*15));cells[row*25+col]+=weight;
  }

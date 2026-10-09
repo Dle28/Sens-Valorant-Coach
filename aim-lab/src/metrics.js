@@ -16,26 +16,11 @@ export function median(values) {
   const arr = values.filter(Number.isFinite).slice().sort((a, b) => a - b);
   return arr.length ? (arr[Math.floor(arr.length / 2)] + arr[Math.floor((arr.length - 1) / 2)]) / 2 : null;
 }
-export function calibrationTrial({ dx, pathX, pathY, distanceCm, samples }) {
-  if (!Number.isFinite(distanceCm) || distanceCm < 5 || distanceCm > 50) return { valid: false, reason: 'Chọn khoảng cách từ 5 đến 50 cm.' };
-  if (![dx, pathX, pathY, samples].every(Number.isFinite) || samples < 5 || Math.abs(dx) < 100) return { valid: false, reason: 'Chưa đủ chuyển động. Di chuột hết khoảng cách đã chọn.' };
-  if (pathX <= 0 || Math.abs(dx) / pathX < 0.9) return { valid: false, reason: 'Chuột đã đổi chiều nhiều. Hãy kéo thẳng một chiều.' };
-  if (pathY / pathX > 0.25) return { valid: false, reason: 'Đường kéo quá chéo. Đo lại theo phương ngang.' };
-  const dpi = Math.abs(dx) * 2.54 / distanceCm;
-  if (dpi < 100 || dpi > 32000) return { valid: false, reason: 'Kết quả ngoài 100–32.000 DPI. Kiểm tra lại khoảng cách.' };
-  return { valid: true, dpi, dx, pathX, pathY, distanceCm, samples };
-}
-export function calibrationSummary(trials) {
-  const values = trials.filter(x => x.valid).map(x => x.dpi);
-  const estimate = median(values);
-  const spread = values.length > 1 ? (Math.max(...values) - Math.min(...values)) / estimate : null;
-  return { estimate, spread, usable: values.length >= 3 && spread <= 0.15, n: values.length };
-}
 export function summarizeRun(run) {
   const shots = run.shots || [];
   const hits = shots.filter(s => s.hit).length;
   const completed = (run.trials || []).filter(t => t.outcome === 'hit');
-  const successTrials = (run.trials || []).filter(t => t.firstShotHit === true && t.firstShotMs <= run.config.deadlineMs).length;
+  const successTrials = (run.trials || []).filter(t => t.firstShotHit === true && Number.isFinite(t.firstShotMs) && t.firstShotMs < run.config.deadlineMs).length;
   const tracking = run.tracking || { validMs: 0, onTargetMs: 0, squaredErrorTime: 0 };
   return {
     shots: shots.length, hits, misses: shots.length - hits,

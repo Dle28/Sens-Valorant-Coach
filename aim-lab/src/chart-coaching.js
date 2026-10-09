@@ -70,18 +70,8 @@ function validFrameCoverage(run) {
   return ratio(validMs, duration);
 }
 
-function aimOffset(target, yaw, pitch) {
-  if (!Array.isArray(target) || target.length !== 3 || !target.every(value => finite(value) !== null)) return null;
-  const cameraYaw = finite(yaw);
-  const cameraPitch = finite(pitch);
-  if (cameraYaw === null || cameraPitch === null) return null;
-  const [x, y, z] = target;
-  const targetYaw = Math.atan2(x, -z);
-  const horizontal = -Math.atan2(Math.sin(targetYaw + cameraYaw), Math.cos(targetYaw + cameraYaw)) * 180 / Math.PI;
-  const targetPitch = Math.atan2(y - 1.6, Math.hypot(x, z));
-  const vertical = (cameraPitch - targetPitch) * 180 / Math.PI;
-  return { x: horizontal, y: vertical };
-}
+import { aimOffset } from './aim-geometry.js';
+
 
 function validErrorHalves(run) {
   const duration = runDuration(run);
@@ -275,7 +265,7 @@ function heatCoaching(run) {
     let locatedMs = 0;
     for (const frame of frames) {
       const window = frameWindow(frame, duration);
-      const offset = aimOffset(frame?.target, frame?.yaw, frame?.pitch);
+      const offset = aimOffset(frame?.target, frame?.yaw, frame?.pitch, frame?.cameraPosition);
       if (!window || !offset) continue;
       locatedMs += window.weight;
       if (Math.abs(offset.x) <= DEADZONE_DEG && Math.abs(offset.y) <= DEADZONE_DEG) totals.center += window.weight;

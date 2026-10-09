@@ -1,4 +1,5 @@
 import { TASKS } from './training.js';
+import {copyScenario} from './training-config.js';
 const UUID=/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i;
 export function parseHistory(text) {
  if(typeof text!=='string'||text.length>5*1024*1024)throw new Error('File lịch sử vượt giới hạn 5 MiB.');
@@ -11,7 +12,9 @@ export function parseHistory(text) {
    const v=s.summary?.[k];if(v!=null&&(!Number.isFinite(v)||v<0))throw new Error('Chỉ số trong file không hợp lệ.');summary[k]=v??null;
   }
   if(!Number.isFinite(summary.shots)||!Number.isFinite(summary.hits)||summary.hits>summary.shots)throw new Error('Số phát bắn không hợp lệ.');
-  const config={};for(const k of ['task','map','difficulty','durationMs','sensitivity','dpi','dpiSource','inputMode','inputGain','exerciseVersion','challengeId','seed','horizontalFovDeg']){const v=s.config[k];if(v===null||['string','number','boolean'].includes(typeof v))config[k]=v;}
+  const config={};for(const k of ['weapon','task','map','difficulty','durationMs','sensitivity','dpi','dpiSource','inputMode','inputGain','exerciseVersion','challengeId','seed','horizontalFovDeg']){const v=s.config[k];if(v===null||['string','number','boolean'].includes(typeof v))config[k]=v;}
+  if(Object.hasOwn(s.config,'scenario')){const scenario=copyScenario(s.config.scenario);if(scenario===undefined)throw new Error('Cấu hình scenario không hợp lệ.');config.scenario=scenario;}
+  if(Number.isFinite(s.config.deadlineMs)&&s.config.deadlineMs>0)config.deadlineMs=s.config.deadlineMs;
   // Imported summaries lack verified provenance; retain them without inventing
   // trajectory analysis or admitting them to automatic progress comparisons.
   return {id:s.id,startedAt:s.startedAt,status:s.status,elapsedMs:Number.isFinite(s.elapsedMs)?s.elapsedMs:0,config,summary,qualityClean:false,imported:true};

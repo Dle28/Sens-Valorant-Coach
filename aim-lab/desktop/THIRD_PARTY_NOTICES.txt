@@ -1,4 +1,4 @@
-Gamesen Aim Lab — third-party notices
+V-AIM COACH — third-party notices
 
 Three.js 0.180.0
 https://threejs.org/
@@ -27,3 +27,24 @@ THE SOFTWARE.
 
 
 Electron and Chromium notices are included as LICENSE.electron.txt and LICENSES.chromium.html in the application distribution.
+
+Kenney Blaster Kit 2.1 (blaster-a, blaster-r, blaster-n, crate-medium)
+Author: Kenney, https://kenney.nl/assets/blaster-kit
+License: Creative Commons Zero (CC0), https://creativecommons.org/publicdomain/zero/1.0/
+Models and texture palette embedded in the application bundle for offline use.
+Original license: src/models/LICENSE-Kenney.txt. Texture URIs embedded; view scale and animation integration adapted.
+
+Sketchfab Vandal Valorant
+Author: hakbux265, https://sketchfab.com/3d-models/vandal-valorant-4083375a4f184561bdbc57a7511abaf7
+License: Creative Commons Attribution 4.0, https://creativecommons.org/licenses/by/4.0/
+Included only when the downloaded GLB is present in the application package.
+
+Sketchfab SAS CS2 Agent Model Blue
+Author: gettan, https://sketchfab.com/3d-models/sas-cs2-agent-model-blue-7f18aaccd0ee4694a36646101a12339e
+License: Creative Commons Attribution 4.0, https://creativecommons.org/licenses/by/4.0/
+The source page credits Valve for the original game asset. Included only when the downloaded GLB is present in the application package.
+
+Be Vietnam Pro (400, 600, 700, 800)
+Source: https://github.com/google/fonts/tree/main/ofl/bevietnampro
+License: SIL Open Font License 1.1. Full license included in dist/assets/fonts/OFL.txt.
+Fonts are bundled locally for offline Vietnamese typography.

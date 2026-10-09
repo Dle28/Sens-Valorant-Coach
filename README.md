@@ -1,8 +1,18 @@
 # Sens Valorant Coach
 
-**Bản phát hành v0.5.6:** bộ chọn map chỉ còn **Lotus** — cảnh đền đá 3D tự tạo với cột cổ, vách núi, cây leo, hoa năng lượng và thác nước — cùng **Dark Range**, nền tối tối giản để tập trung vào mục tiêu. Lịch sử Verdant Sanctum cũ được chuyển thành Lotus; map cũ bị loại được giữ nhãn legacy để không làm sai số liệu. Xem [thay đổi](aim-lab/README.md). Tải [bản Windows portable v0.5.6](https://github.com/Dle28/Sens-Valorant-Coach/releases/tag/v0.5.6).
+**Đã triển khai lộ trình luyện tập:** 3 playlists có nghỉ và khôi phục, Shoot/No-shoot, Priority trio, combo/huy chương và so sánh đúng cấu hình. Tổng 31 bài. Xem [hướng dẫn sử dụng](docs/TRAINING_EXPANSION.md).
 
-Ứng dụng desktop Windows và phòng tập aim 3D, phát triển dưới tên **Gamesen Aim Lab**. Có 16 bài tập, 2 map gồm Lotus và Dark Range, 3 thử thách, preset sensitivity hip-fire VALORANT, phân tích sau phiên và lưu dữ liệu cục bộ. Không kết nối vào game VALORANT.
+
+**Cập nhật mini-game 09/09/2026:** thêm 6 bài (Figure 8, Pendulum, Zigzag click, Stop & Go, Elevation ladder, Flash flick), nâng catalog lên 29 bài gồm 25 mini-game và 4 Combat Sites; có 7 thử thách. Mở **Mini-games** ở sidebar hoặc chọn **Game Mode** trong briefing. Xem [chi tiết và các phần cần bổ sung](docs/MINI_GAMES_REVIEW.md). Đây là cập nhật mã nguồn/bundle, chưa có EXE mới.
+
+
+**v0.9.0 — Combat Sites FPS:** trực tiếp di chuyển và bắn trong hai site 3D nguyên gốc. Site Defense có địch theo đợt liên tục; Movement Read luyện đọc nhịp đổi hướng/dừng. Mở mục Combat Sites ở sidebar. File cục bộ: `aim-lab/release/V-AIM-COACH-0.9.0-Windows-x64.exe`.
+
+**v0.8.0 — Tactical Lab:** 10 mô phỏng chiến thuật 3D nguyên gốc và 10 ảnh concept, có timeline từng bước, kiểm tra che khuất và camera tương tác. Đây là bài minh họa, không phải phiên luyện có chấm điểm. Bản Windows cục bộ: `aim-lab/release/V-AIM-COACH-0.8.0-Windows-x64.exe`.
+
+**Bản phát triển v0.7.0:** **V-AIM COACH** có khu vực render riêng cho Lotus và Dark Range, ba mini-game chủ động (Strafe Duel, Counter-strafe, Survival Lane), di chuyển WASD/Shift, địch 3D có hành vi và bắn trả, cùng dữ liệu HP/giáp trong kết quả phiên. Luồng Map → Zone → Scenario → Configuration → Training → Results vẫn dùng dữ liệu cục bộ. Xem [thay đổi](aim-lab/README.md). Bản public gần nhất vẫn là [Windows portable v0.5.6](https://github.com/Dle28/Sens-Valorant-Coach/releases/tag/v0.5.6).
+
+Ứng dụng desktop Windows và phòng tập aim 3D, phát triển dưới tên **V-AIM COACH**. Có 16 bài tập, 2 map gồm Lotus và Dark Range, 3 thử thách, phân tích sau phiên và lưu dữ liệu cục bộ. Không kết nối vào game bên ngoài.
 
 - **Tải app Windows:** [GitHub Releases](https://github.com/Dle28/Sens-Valorant-Coach/releases).
 - **Mục tiêu, hiện trạng và định hướng:** [docs/TARGETS_STATUS_ROADMAP.md](docs/TARGETS_STATUS_ROADMAP.md).

@@ -9,3 +9,8 @@ __pycache__/
 .env
 .env.*
 !.env.example
+aim-lab/data/bronze/
+aim-lab/data/silver/
+aim-lab/data/gold/
+aim-lab/data/manifests/
+aim-lab/data/lake/

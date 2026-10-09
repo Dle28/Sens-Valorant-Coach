@@ -1,0 +1,3 @@
+const {app,BrowserWindow}=require('electron');const path=require('node:path');const fs=require('node:fs');
+app.setPath('userData',path.join(app.getPath('temp'),'lotus-report-'+process.pid));
+app.whenReady().then(async()=>{const out=process.env.LOTUS_OUTPUT;const w=new BrowserWindow({show:false,width:1600,height:1130,webPreferences:{offscreen:true}});await w.loadFile(path.join(out,'Lotus-B-Direct-Comparison.html'));await w.webContents.executeJavaScript('Promise.all([...document.images].map(i=>i.decode()))');fs.writeFileSync(path.join(out,'lotus-b-direct-comparison.png'),(await w.webContents.capturePage()).toPNG());app.exit(0);}).catch(e=>{console.error(e);app.exit(1)});
